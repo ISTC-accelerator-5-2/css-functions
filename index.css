@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* https://www.w3schools.com/csSref/css_functions.asp */
+/* Function syntax
+function-name(arguments) */
+
+/* attr function
+attr(attribute-name) */
+
+a::before {
+  content: " (" attr(href) ") ";
+}
+
+/* calc function
+calc(calculation) */
+
+div.example {
+  width: calc(100% - 100px);
+  height: 200px;
+}
+
+/* rgb function
+rgb(0, 0, 0) == #000 */
+/* rgb(255, 255, 255) == #FFF */
+
+/* div {
+  background-color: rgb(221, 255, 0);
+} */
+
+/* rgba function
+rgb(0, 0, 0, 0.5) */
+
+div.example {
+  background-color: rgba(218, 34, 34, 0.687);
+}
+
+div.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* gradient functions */
+/* linear-gradient(red, yellow, blue); */
+/* radial-gradient(red, yellow, blue); */
+
+div.gradient {
+  width: 500px;
+  height: 500px;
+  background-image: linear-gradient(to bottom right, red, yellow, blue, white, orange);
+  /* background-image: radial-gradient(red, yellow, blue); */
+  /* rotate: 90deg; */
+}
+
+/* var function
+:root {
+  --main-bg-color: coral;
+}
+var(--main-bg-color); */
+
+:root {
+  --main-bg-color: coral;
+  --main-text-color: rgb(230, 230, 230);
+}
+
+p {
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+}
